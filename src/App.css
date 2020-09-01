@@ -51,8 +51,11 @@ table {
 
 body {
   text-align: center;
+  /* background-color:black; */
+  background-image: url("https://images.unsplash.com/photo-1506143925201-0252c51780b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80https://images.unsplash.com/photo-1553531580-54bcdf7bc851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+  /* margin: 500px 0px 0px 115px;
+  overflow: bottom;  */
 }
-
 .joke-item {
   list-style-type: none;
   text-align: center;
@@ -62,48 +65,45 @@ body {
   box-shadow: 0 6px 15px 6px rgb(211, 211, 211);
   margin-bottom: 40px;
   justify-content: center;
-  /* padding-left: 500px; */
+  margin-left: 150px;
 }
-
-.punchline {
-  list-style-type: none;
-  text-align: center;
-  /* border: 0px 5px 10px grey; */
-  width: 300px;
-  height: 350px;
-  box-shadow: 0 6px 15px 6px rgb(211, 211, 211);
-  margin-bottom: 40px;
-  justify-content: center;
-  /* padding-left: 500px; */
-}
-
 .title {
   width: 100%;
   height: 300px;
   background-image: url("https://images.unsplash.com/photo-1524117074681-31bd4de22ad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80");
   /* background: url("/laugh-banner.jpg"); */
-  display: flexbox;
 }
-
+div.title{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
 h1 {
   text-align: center;
   color: white;
 }
-
 h2 {
   text-align: center;
+  padding: 20px;
+  text-transform: capitalize;
 }
-
-ul {
+ul.joke-list {
   text-align: center;
   justify-content: center;
-  padding-left: 550px;
+  padding-left: 410px;
 }
-
-li {
+li.joke-item {
   text-align: center;
+  background-color: rgb(37, 222, 80);
+  box-shadow: 0 0 10px 5px red;
 }
-
+/* li{
+  -moz-box-shadow:    inset 0 0 20px #a90808; 
+  -webkit-box-shadow: inset 0 0 20px #b81111;  
+  box-shadow:         inset 0 0 20px #cb0e0e;
+} */
 p {
-  padding: 80px 20px;
+  padding: 40px 20px;
+  font-size: 30px;
 }

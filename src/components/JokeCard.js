@@ -13,7 +13,7 @@ export default function JokeCard(props) {
             <h2>{props.joke.category}</h2>
             <p>{props.joke.setup}</p>
             <button onClick = {props.handleClick}>Show Punchline</button>
-            {props.punchline ? <p>{props.joke.punchline}</p> : null}
+            {props.punchline ? <p className = "punchline">{props.joke.punchline}</p> : null}
             
         </li>
     )
