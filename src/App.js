@@ -1,5 +1,7 @@
 import React from 'react';
 import JokeCard from './components/JokeCard'
+import Punchline from './components/Punchline'
+
 
 
 import './App.css';
@@ -10,8 +12,11 @@ const jokesUrl = `${baseUrl}/jokes`
 class App extends React.Component {
 
   state = {
-    jokes: []
+    jokes: [],
+    showPunchline: false
   }
+
+
 
   componentDidMount() {
     fetch(jokesUrl)
@@ -21,9 +26,20 @@ class App extends React.Component {
 
   showJokes = () => {
     return this.state.jokes.map(joke => {
-      return <JokeCard joke = {joke} />
+      return <JokeCard joke = {joke} handleClick = {this.handleClick} punchline = {this.state.showPunchline}/>
     })
   }
+
+  showAnswer = () => {
+    return this.state.jokes.map(joke => {
+      return <Punchline joke = {joke} />
+    })
+  }
+
+  handleClick = () => {
+    this.setState({showPunchline: true});
+   };
+  
   
   render() {
 
@@ -36,7 +52,9 @@ class App extends React.Component {
         </div>
         <ul className = "joke-list">
           {this.showJokes()}
+          {/* {this.showAnswer()} */}
         </ul>
+
       </div>
     );
   }

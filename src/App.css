@@ -65,6 +65,18 @@ body {
   /* padding-left: 500px; */
 }
 
+.punchline {
+  list-style-type: none;
+  text-align: center;
+  /* border: 0px 5px 10px grey; */
+  width: 300px;
+  height: 350px;
+  box-shadow: 0 6px 15px 6px rgb(211, 211, 211);
+  margin-bottom: 40px;
+  justify-content: center;
+  /* padding-left: 500px; */
+}
+
 .title {
   width: 100%;
   height: 300px;
