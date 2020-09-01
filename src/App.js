@@ -1,6 +1,7 @@
 import React from 'react';
 import JokeCard from './components/JokeCard'
 
+
 import './App.css';
 
 const baseUrl = "http://localhost:3000"
@@ -29,7 +30,9 @@ class App extends React.Component {
     
     return (
       <div className="App">
+        <div className = "title">
         <h1>Jokes App</h1>
+        </div>
         <ul className = "joke-list">
           {this.showJokes()}
         </ul>
