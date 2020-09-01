@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg'; 
+import JokeCard from './components/JokeCard'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const baseUrl = "http://localhost:3000"
+const jokesUrl = `${baseUrl}/jokes`
+
+class App extends React.Component {
+
+  state = {
+    jokes: []
+  }
+
+  componentDidMount() {
+    fetch(jokesUrl)
+      .then(response => response.json())
+      .then(jokes => this.setState({jokes}))
+  }
+
+  showJokes = () => {
+    return this.state.jokes.map(joke => {
+      return <JokeCard joke = {joke} />
+    })
+  }
+  
+  render() {
+
+    
+    return (
+      <div className="App">
+        <h1>Jokes App</h1>
+        <ul className = "joke-list">
+          {this.showJokes()}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default App;
