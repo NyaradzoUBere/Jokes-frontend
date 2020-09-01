@@ -32,6 +32,7 @@ class App extends React.Component {
       <div className="App">
         <div className = "title">
         <h1>Jokes App</h1>
+        <h2>Animate Any Party With These Jokes</h2>
         </div>
         <ul className = "joke-list">
           {this.showJokes()}
